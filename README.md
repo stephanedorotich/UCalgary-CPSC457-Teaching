@@ -1,10 +1,8 @@
 # Welcome to CPSC457!
 
 This repository provides a collection of teaching material for [CPSC457](https://contacts.ucalgary.ca/info/cpsc/courses/F22/CPSC457) - as offered by the University of Calgary.
-
 There are 8 distinct topics. Each includes a collection of files to be used for teaching purposes, live coding demos, and as exercises.
-
-More information can be found in the TeachingResources folder.
+Additional teaching info can be found under *TeachingResources*.
 
 # Topics
 1. Set-up & Terminal
