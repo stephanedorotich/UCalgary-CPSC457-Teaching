@@ -1,4 +1,7 @@
-# 1-SetUp
+---
+title: 1-SetUp
+author: Stéphane Dorotich
+---
 
 ## Objectives
 Prepare students for remote linux development by:
