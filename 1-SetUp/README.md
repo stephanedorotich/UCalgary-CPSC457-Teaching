@@ -87,8 +87,7 @@ note: Ubuntu is not required (but it's what I use.) You can use *Git bash*, *wsl
 ***
 SFTP (Secure File Transfer Protocol) is a great way for students to move files to and from the server. It's lightweight and works just like SSH!
 
-
-- close SSH session (if needed) with ```logout```
+- ```logout``` to close SSH connection.
 - ```sftp first.last@linuxlab.cpsc.ucalgary.ca```
 - Navigate **remote** filesystem with ```ls``` and ```cd``` commands. (```rm```, ```rmdir```, and ```mkdir``` all work)
 - Navigate **local** filesystem with ```lls``` and ```lcd``` (local ls, and local cd) i.e. just us 'l' prefix
