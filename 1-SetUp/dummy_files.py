@@ -6,12 +6,16 @@ def usage_error():
     sys.exit()
 
 def create_dummy_files(i):
-    while i > 0:
-        name = "./dummyfiles/file" + str(i) + ".txt"
-        f = open(name, 'w')
-        f.write(name)
-        f.close()
-        i-=1
+    s = 1;
+    while s <= i:
+        name = "./dummyfiles/file" + str(s) + ".txt"
+        if os.path.isfile(name):
+            i+=1;
+        else:
+            f = open(name, 'w')
+            f.write(name)
+            f.close()
+        s+=1
 
 if __name__ == "__main__":
     if not (len(sys.argv) == 2):
@@ -20,7 +24,7 @@ if __name__ == "__main__":
         num_files = int(sys.argv[1])
         if num_files <= 0: raise ValueError()
         if not os.path.isdir('files'):
-            os.mkdir('dummyfiles')
+            os.mkdir('files')
         create_dummy_files(num_files)
         print(f'{num_files} file(s) created.')
     except:
