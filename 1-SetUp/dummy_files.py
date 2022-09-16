@@ -8,7 +8,7 @@ def usage_error():
 def create_dummy_files(i):
     s = 1;
     while s <= i:
-        name = "./dummyfiles/file" + str(s) + ".txt"
+        name = "./files/file" + str(s) + ".txt"
         if os.path.isfile(name):
             i+=1;
         else:
