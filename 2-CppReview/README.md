@@ -39,7 +39,7 @@ a broad overview of a variety of C++ features.
 - Use either C++ streams (```std::cout << ...```) or C ```printf()```. You will need ```#include <iostream>``` and ```#include <cstdio>``` respectively.
 - Compile and run
 
-### Exercise 1: Program Args
+### Exercise 1: Program Args (Activity)
 ***
 - Review program args (what are they, why are they useful, ...)
   - argc = argument count
@@ -111,3 +111,21 @@ Open VS Code and remote in to 457 folder.
 - Understand that char arrays are immutable
 - Understand that ```std::string``` are feature rich.
 - C++ documentation <https://cplusplus.com/reference/string/string/>
+
+### Exercise 8: Vectors
+***
+- Review ```vector.cpp```
+- Discuss danger of using ```auto``` instead of being deliberate about data type.
+- C++ documentation <https://en.cppreference.com/w/cpp/container/vector>
+- Review ```vec_loops.cpp```
+- Discuss the variety of implementations and their benefits and drawbacks.
+- Again, warn against ```auto```. Should ALWAYS know your data type.
+
+### Exercise 9: Vectors (Activity)
+***
+- Design a program that:
+  - Takes three program arguments, ```min```, ```max```, and ```factor```.
+  - Produces a ```std::vector<int>``` of integers between ```min``` and ```max``` such that each element is a multiple of the ```factor```.
+  - Prints the size of the vector.
+  - Prints the first 20 elements of the vector.
+  - Clears the vector so that its size is 0.
