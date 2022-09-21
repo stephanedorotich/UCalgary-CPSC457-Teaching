@@ -1,21 +1,22 @@
-// Author: unknown (Shining Chen?)
-// printing to console in C++
+// Author: Xining Chen, Stéphane Dorotich
+// CPSC 457
+// Use freely
 
-using namespace std;
+#include <iostream>
 
 int main()
 {
-    string name
+    std:string name;
     int age;
-    double num = 3.14159;
+    double num = 3.14159
 
-    cout << "Hello! What is your name?\n";
-    cin >> name;
-    cout << "Nice to meet you " << name << ". What is your age?\n";
-    cin >> age;
+    std::cout << "Hello! What is your name?\n";
+    std::cin >> name;
+    std::cout << "Nice to meet you " << name << ". What is your age?\n";
+    std::cin >> age;
 
-    printf ("Wow! My age is also %i. \n", age);
-    printf ("Bye! %6.5f", num); 
+    printf ("Wow! My age is also %d. \n", age);
+    printf ("Bye! %6.5f \n, num); 
 
     return 0; 
 }

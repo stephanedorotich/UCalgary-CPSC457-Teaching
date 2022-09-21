@@ -1,17 +1,17 @@
 // Print out the number of command line arguments
 // Print out each command line argument
 // Author: Xining Chen
-#include <iostream>
+// CPSC 457
+// Use freely
 
-
-int main(int argc, char* argv[])
+int main(int argc, char ** argv)
 {
-    cout << "Number of arguments: " << endl;
-    cout << "argv contains: " << endl;
+    std::cout << "Number of arguments: " << std::endl;
+    std::cout << "argv contains: " << std::endl;
 
-    for (int i = 0; i < argc; i++)
+    for (i = 0; i < argc; i++)
     {
-        cout << "argv[" << i << "] = " << 0 << endl;
+        cout << "argv[" << i << "] = " << argc[i] << endl;
     }
 
     return 0;

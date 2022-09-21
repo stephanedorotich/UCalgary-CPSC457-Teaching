@@ -1,25 +1,35 @@
 // Integer types
-// Author: Xining Chen
+// Author: Xining Chen, Stéphane Dorotich
+// CPSC 457
+// Use freely
 
 #include <iostream>
+#include <climits>
 #include <cstdint>
-
-using namespace std;
 
 int main()
 {
-    cout << "Minimum short = " << SHRT_MIN << endl;
-    cout << "Maximum short = "<< SHRT_MAX << endl;
-    cout << "Minimum int = " << SHRT_MIN;
-    cout << "Maximum int = "<< SHRT_MAX << endl;
-    cout << "Minimum long = " << SHRT_MIN << endl;
-    cout << "Maximum long = " << SHRT_MAX << endl;
+    short n1;
+    int n2;
+    long n3;
+    
+    std::cout << "Min/Max of Integer Types\n";
+    std::cout << "\tshort min:\t" << SHRT_MIN << std::endl;
+    std::cout << "\tshort max:\t"<< SHRT_MAX << std::endl;
+    std::cout << "\tint min:\t" << INT_MIN << std::endl;
+    std::cout << "\tint max:\t"<< INT_MAX << std::endl;
+    std::cout << "\tlong min:\t" << LONG_MIN << std::endl;
+    std::cout << "\tlong max:\t" << LONG_MAX << std::endl;
 
-    cout << "Size of int = " << sizeof(int) << endl;
-    cout << "Size of long = " << sizeof(long) << endl;
-    cout << "Size of int64_t = " << sizeof(int64_t) << endl;
-    cout << "Size of int32_t = " << sizeof(int32_t) << endl;
-    cout << "Size of int16_t = " << sizeof(int64_t) << endl;
-    cout << "Size of int8_t = " << sizeof(int64_t) << endl;
+    std::cout << "\nStorage Size of Integer Types (bytes)\n";
+    std::cout << "\tshort:\t\t" << sizeof(short) << std::endl;
+    std::cout << "\tint:\t\t" << sizeof(int) << std::endl;
+    std::cout << "\tlong:\t\t" << sizeof(long) << std::endl;
+
+    std::cout << "\nFixed Size Integer Types (bytes)\n";
+    std::cout << "\tint8_t:\t\t" << sizeof(int8_t) << std::endl;
+    std::cout << "\tint16_t:\t" << sizeof(int16_t) << std::endl;
+    std::cout << "\tint32_t:\t" << sizeof(int32_t) << std::endl;
+    std::cout << "\tint64_t:\t" << sizeof(int64_t) << std::endl;
     return 0;
 }
