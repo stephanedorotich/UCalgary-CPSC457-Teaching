@@ -1,3 +1,7 @@
+// Author: Stéphane Dorotich
+// CPSC 457
+// Use freely
+
 #include <iostream>
 
 int main() {
@@ -11,7 +15,7 @@ int main() {
     std::string str3 = " and I can easily be concatenated with other strings\n";
     str2 = str2 + str3;
     str2.append("\nIt's also very easy to append to me!\n");
-    
+
     if (str2.size() == str2.length()) {
         str2.append("My size and length are the same and easy to find\n");
     }
