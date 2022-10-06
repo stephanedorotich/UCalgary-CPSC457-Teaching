@@ -1,25 +1,16 @@
 #include <iostream>
 #include <sys/stat.h>
-#include <bitset>
+#include <sys/sysmacros.h>
+
+void usage_error(char * progName) {
+    std::cout << "Usage:\n\t" << progName << " path\n";
+    exit(-1);
+}
 
 int main(int argc, char ** argv) {
+    if (argc != 2) usage_error(argv[0]);
     struct stat s;
-    if (argc != 2) return -1;
-    if (*argv[1] == 'd') {
-        stat("./", &s);
-        std::cout << "3-SystemCalls DIRECTORY\n";
-    } else if (*argv[1] == 'e') {
-        stat("../", &s);
-        std::cout << "t457 DIRECTORY\n";
-    } else if (*argv[1] == 'f') {
-        stat("./stat.cpp", &s);
-        std::cout << "FILE: stat.cpp\n";
-    } else return -1;
-
-    // std::bitset<16> d_ftype(dir.st_mode);
-    // std::cout << d_ftype << std::endl;
-    // std::bitset<16> f_ftype(file.st_mode);
-    // std::cout << f_ftype << std::endl;
+    stat(argv[1], &s);
 
     // Finding out if the pathname is a directory or regular file
     std::cout << "\nIs it a Directory or a file?\n";
@@ -34,7 +25,7 @@ int main(int argc, char ** argv) {
     std::cout << "\nOn what device does this file exist?\n";
     std::cout << "Device:\t" << s.st_dev << std::endl;
 
-    // How many hardlinks to the file?
-    std::cout << "\nHow many hard links point to the file?\n";
-    std::cout << "Links:\t" << s.st_nlink << std::endl;
+    // How many bytes is the file?
+    std::cout << "\nHow many bytes is the file?\n";
+    std::cout << "Bytes:\t" << s.st_size << std::endl;
 }
