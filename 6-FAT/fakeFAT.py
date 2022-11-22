@@ -4,13 +4,13 @@
 
 import sys
 import random
-from datetime import datetime
+import time
 
 def makeFakeFAT(n_blocks: int):
-    random.seed(datetime.now())
-
+    random.seed(time.time())
+    
     ## Produce random number.
-    ## -1 has a >12.5% chance, every other number is evenly distributed
+    ## -1 has a ~12.5% chance, every other number is evenly distributed
     term_blocks = int(n_blocks/8)+1
     total = n_blocks + term_blocks
 
@@ -22,7 +22,7 @@ def makeFakeFAT(n_blocks: int):
 
 def usage_error(progName: str):
     print("Usage:\n\t" + progName + " n", end="")
-    print("\t\tn >= 0")
+    print("\t\t0 <= n < 1,000,000")
     exit(-1)
 
 if __name__ == "__main__":
@@ -35,7 +35,7 @@ if __name__ == "__main__":
     except:
         pass
     
-    if (n_blocks == 0):
+    if (n_blocks == 0) or (n_blocks >= 1000000):
         usage_error(sys.argv[0])
     
     makeFakeFAT(n_blocks)
