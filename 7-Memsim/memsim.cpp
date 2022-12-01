@@ -108,10 +108,14 @@ struct Simulator {
     // if right neighbour (r.n.) is free
     //    absorb r.n. into p
     
-    // ! This is the hardest part of the assignment. Lots of pointer updates.
+    // ! This is the hardest part of the assignment.
     // ! Do this ON PAPER FIRST
     // ! If you understand it on paper, it is easy to implement.
     // ! PLEASE PLEASE PLEASE do this on paper first
+
+    // use erase() from cpp list
+    // note: the erase() method returns an Iterator to the node 
+    // after the erased one, this can be used to your advantage
   }
 
   void allocate(int tag, int size)
@@ -130,8 +134,7 @@ struct Simulator {
     //     - mark the first partition occupied, and store the tag in it
     //     - mark the second partition free
 
-    // ! Can be challenging, do this on paper first.
-    // ! Please do this on paper first.
+    // Use insert() from cpp list
   }
 
   void deallocate(int tag)
