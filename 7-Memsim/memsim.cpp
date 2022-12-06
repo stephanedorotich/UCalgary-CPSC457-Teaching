@@ -221,7 +221,7 @@ struct Simulator {
     std::cout << std::setw(SPACES) << std::right << "Ss and As (+): ";
     id = 0;
     for (PartitionRef it = all_blocks.begin(); it != all_blocks.end(); it=std::next(it)) {
-      if ((*it).size < 1 || (*it).addr < 1) {
+      if ((*it).size < 1 || (*it).addr < 0) {
         std::cout << "Fail\n";
         std::cout << "\t\tBlock:    " << id << std::endl;
         std::cout << "\t\tSize:     " << (*it).size << std::endl;
